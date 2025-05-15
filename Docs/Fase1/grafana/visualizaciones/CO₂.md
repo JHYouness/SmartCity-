@@ -1,0 +1,1 @@
+CO₂ (SensorCO2)
