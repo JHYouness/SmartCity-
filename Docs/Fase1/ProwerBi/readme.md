@@ -1,16 +1,13 @@
 
-🔷 VISUAL 1: Heatmap (Mapa de calor por día y sensor)
-Objetivo: ver claramente si hubo días críticos o valores anómalos
+# 🔷 VISUAL 1: Heatmap (Mapa de calor por día y sensor)
+## Objetivo: ver claramente si hubo días críticos o valores anómalos
 
-Visualización: "Gráfico de matriz de calor"
-
-Eje X: fecha_legible
-
-Eje Y: entity_id
-
-Valores: avg_value
-
-Filtros: attribute = CO₂ o cualquier otro
+| Campo                   | Valor                           |
+| ----------------------  | ------------------------------- |
+| **Visualización**       | `Grafico de matriz de calor`    |
+| **Eje X**               | `fecha_legible`                 |
+| **Eje Y**               | `entity_id:5432`                |
+| **Valores**             | `avg_value`                     |
 
 🔷 FILTROS
 - Segmentación de rango de fechas con fecha_legible
