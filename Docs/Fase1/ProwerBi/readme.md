@@ -15,4 +15,4 @@ Filtros: attribute = CO₂ o cualquier otro
 🔷 FILTROS
 - Segmentación de rango de fechas con fecha_legible
   
-![Captura de pantalla (483)](https://github.com/user-attachments/assets/55252199-1aac-439b-8e0d-7b777bdd8cef)
+![Captura de pantalla (487)](https://github.com/user-attachments/assets/b8699978-386e-4c37-9409-6c82373778d7)
