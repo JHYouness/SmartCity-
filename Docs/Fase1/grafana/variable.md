@@ -4,7 +4,7 @@
 | --------------- | -------------------------------------------------------------------------------- |
 | **Name**        | `sensor_temp`                                                                    |
 | **Type**        | `Query`                                                                          |
-| **Data source** | Selecciona tu fuente de datos (ej. `CrateDB`)                                    |
+| **Data source** | `CrateDB`                                    |
 | **Query**       | `SELECT DISTINCT entity_id FROM doc.etsensor WHERE temperature IS NOT NULL ` |
 | **Refresh**     | On Dashboard Load                                                                |
 
