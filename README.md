@@ -1,120 +1,76 @@
-# 🏙️ Smart City - Proyecto Fase 1
+# 🌆 Proyecto Smart City con FIWARE
 
-Este proyecto simula el funcionamiento de una ciudad inteligente utilizando la plataforma **FIWARE**, enfocándose en la captura, almacenamiento y visualización de datos de sensores.
+## 1. ✨ Definición
 
----
+Este proyecto simula una Smart City utilizando la plataforma FIWARE. Se definen y simulan tres sensores:
 
-## 📦 Tecnologías utilizadas
+1. 🌡️ **Sensor de temperatura**: mide Temperatura y Humedad
+2. 🟫 **Sensor de CO₂**
+3. 💧 **Sensor de calidad del agua**: mide pH, Temperatura y Cloro
 
-- **FIWARE Orion Context Broker**
-- **QuantumLeap**
-- **CrateDB**
-- **Grafana**
-- **Power BI**
-- **Python (para ingesta de datos)**
-- **Docker + docker-compose**
+Se capturan datos de estos sensores y se almacenan mediante servicios de FIWARE (Orion, QuantumLeap, CrateDB), y se visualizan con Grafana y Power BI.
 
----
+El proyecto se divide en 2 fases:
 
-## 🎯 Objetivo general
+- ⚙️ **Fase 1**: Configuración de la infraestructura sin IoT-Agent, con servicios de persistencia (QuantumLeap y CrateDB)
+- 🔌 **Fase 2**: Integración de un IoT-Agent para captura de datos reales en aula
 
-Simular una Smart City en la que tres sensores virtuales generan datos que se almacenan en una base de datos de series temporales, se visualizan en un dashboard (Grafana) y se resumen en un Data Warehouse para su análisis en Power BI.
+## 2. 🔗 Enlaces a documentación
 
----
+- [🔹 Uso avanzado NGSIv2](https://github.com/FIWAREZone/tutorial.ngsi-advanced)
+- [🔹 Ejemplo de uso](https://fiware-training.readthedocs.io/es-mx/latest/casodeestudio/descripcion/)
+- [🔹 Esquema de funcionamiento](https://fiware-tutorials.readthedocs.io/en/latest/getting-started.html)
+- [🔹 Agentes IoT](https://github.com/FIWAREZone/tutorial.iot-agents)
 
-## 🧭 Estructura del proyecto
+## 3. 📄 Pasos del Proyecto y Estructura de Ficheros
 
-```bash
-Docs/
-└── Fase1/
-    ├── ETL/
-    │   ├── creacion_tabla.md
-    │   ├── ingesta.md
-    │   ├── verificacion.md
-    ├── grafana/
-    │   ├── configuracion.md
-    │   ├── variable.md
-    │   └── visualizaciones/
-    │       ├── temperatura.md
-    │       ├── CO₂.md
-    │       ├── Humedad.md
-    │       └── pH.md
-    ├── Entidades.md
-    ├── SuscripcionOrion.md
-    ├── IngestaDatos.py
-    ├── documentacion.md
-README.md
-```
+### 🚀 Fase 1 - Infraestructura, Simulación de Datos y Visualización
 
----
+1. **Definición de entidades**
+   - [`Docs/Fase1/Entidades.md`](Docs/Fase1/Entidades.md)
 
-## 🚦 Fase 1 - Simulación sin IoT Agent
+2. **Creación de suscripciones en Orion**
+   - [`Docs/Fase1/SuscripcionOrion.md`](Docs/Fase1/SuscripcionOrion.md)
 
-### ✔️ Componentes
+3. **Ingesta de datos simulados**
+   - [`Docs/Fase1/IngestaDatos.py`](Docs/Fase1/IngestaDatos.py)
 
-- 3 sensores simulados:
-  - `SensorTemp1`: temperatura y humedad
-  - `SensorCO2`: CO₂
-  - `SensorAgua`: pH, temperatura y cloro
-- Orion Context Broker + QuantumLeap + CrateDB + Grafana
-- Script Python que envía 400 lecturas por atributo (marzo y abril 2025)
+4. **Configuración de Grafana**
+   - [`Docs/Fase1/grafana/configuracion.md`](Docs/Fase1/grafana/configuracion.md)
 
-### ✔️ Requisitos cumplidos
+5. **Visualizaciones en Grafana** 📊
+   - [`Docs/Fase1/grafana/visualizaciones/CO₂.md`](Docs/Fase1/grafana/visualizaciones/CO₂.md)
+   - [`Docs/Fase1/grafana/visualizaciones/Humedad.md`](Docs/Fase1/grafana/visualizaciones/Humedad.md)
+   - [`Docs/Fase1/grafana/visualizaciones/pH.md`](Docs/Fase1/grafana/visualizaciones/pH.md)
+   - [`Docs/Fase1/grafana/visualizaciones/temperatura.md`](Docs/Fase1/grafana/visualizaciones/temperatura.md)
 
-✅ Creación de las entidades  
-✅ Creación de la suscripción con metadata `TimeInstant`  
-✅ Ingesta de datos históricos (01/03/25 - 30/04/25)  
-✅ Visualización en Grafana: 4 paneles + 1 variable  
-✅ ETL: resumen diario en tabla `dw_sensor_resumen`  
-✅ Cuadro de mando en Power BI con 2 visualizaciones y 2 filtros  
+6. **Variables en Grafana** 🔧
+   - [`Docs/Fase1/grafana/variable.md`](Docs/Fase1/grafana/variable.md)
+
+7. **ETL para Data Warehouse** 🛢️
+   - Creación tabla: [`Docs/Fase1/ETL/creacion_tabla.md`](Docs/Fase1/ETL/creacion_tabla.md)
+   - Ingesta: [`Docs/Fase1/ETL/ingesta.md`](Docs/Fase1/ETL/ingesta.md)
+   - Verificación: [`Docs/Fase1/ETL/verificacion.md`](Docs/Fase1/ETL/verificacion.md)
+
+8. **Visualizaciones en Power BI** 🔍
+   - [`Docs/Fase1/ProwerBi/Visualizacion1.md`](Docs/Fase1/ProwerBi/Visualizacion1.md)
+   - [`Docs/Fase1/ProwerBi/Visualizacion2.md`](Docs/Fase1/ProwerBi/Visualizacion2.md)
+
+## 4. 🛠️ Fase 2 (pendiente de implementación)
+
+- Añadir IoT-Agent para captura de datos reales desde sensores físicos en el aula.
 
 ---
 
-## 📈 Fase 2 - Con Cygnus y MySQL (❌ aún no iniciado)
+## 5. 🎯 Objetivo Final
 
-- Reemplazar QuantumLeap y CrateDB por:
-  - FIWARE Cygnus como sistema de ingesta
-  - MySQL como base de datos histórica
-- Reconfigurar Orion para notificar a Cygnus
-
----
-
-## 🌐 Fase 3 - Con IoT Agent y sensores reales (❌ aún no iniciado)
-
-- Integrar un IoT Agent (Ultralight o JSON)
-- Conectar con sensores reales o simulados por HTTP/MQTT
-- Orion recibe datos automáticamente y los canaliza a almacenamiento
+- Desarrollar un entorno FIWARE funcional y documentado.
+- Simular sensores y visualizar sus datos.
+- Implementar una arquitectura de análisis de datos con Grafana, Power BI y Data Warehouse.
+- Dejar documentado el proceso en markdowns para facilitar replicación o ampliación.
 
 ---
 
-## 📄 Documentación
+**👨‍🎓 Autores:** Proyecto de simulación educativa FIWARE Smart City.
 
-Cada parte del proyecto está explicada en los archivos `.md` organizados por categoría:
-
-- `grafana/` → configuración, paneles, variable dinámica
-- `ETL/` → creación de tabla, inserción de datos, verificación
-- `Entidades.md` → definición de sensores
-- `SuscripcionOrion.md` → configuración correcta de notificaciones
-
----
-
-## 🚀 Cómo iniciar el proyecto
-
-1. Clonar el repositorio
-2. Lanzar los contenedores con:
-   ```bash
-   docker-compose up -d
-   ```
-3. Ejecutar el script de carga de datos:
-   ```bash
-   python IngestaDatos.py
-   ```
-4. Ver dashboards en:
-   - Grafana: [http://localhost:3000](http://localhost:3000)
-   - Power BI: conectar a CrateDB por PostgreSQL
-
----
-
-## 🙋 Autor
-
-Youness — Proyecto Smart City para Fase 1
+**📂 Repositorio:** Este README resume los pasos y ficheros necesarios para ejecutar y comprender el proyecto.
