@@ -1,4 +1,3 @@
-
 # 🌆 Proyecto Smart City con FIWARE
 
 ## 1. ✨ Definición
@@ -58,7 +57,74 @@ El proyecto se centra únicamente en la:
 
 ---
 
-## 4. 🎯 Objetivo Final
+## 4. 🏗️ Arquitectura del Proyecto
+
+```plaintext
++---------------------+
+|     Simuladores     |
+|  (scripts Python)   |
++----------+----------+
+           |
+           v
++---------------------+
+|       Orion CB      |
+|  (Context Broker)   |
++----------+----------+
+           |
+           v
++---------------------+
+|     QuantumLeap     |
+|     (Historian)     |
++----------+----------+
+           |
+           v
++---------------------+
+|       CrateDB       |
+| (Base de datos TS)  |
++----------+----------+
+           |
+   +-------+-------+
+   |               |
+   v               v
+Grafana 📊     Power BI 📈
+```
+
+Esta arquitectura representa cómo los datos simulados pasan desde scripts Python hacia Orion, se almacenan con persistencia en CrateDB a través de QuantumLeap, y se visualizan con herramientas de análisis como Grafana y Power BI.
+
+---
+
+## 5. 🗂️ Estructura del Repositorio
+
+```plaintext
+SmartCity--main/
+├── README.md
+└── Docs/
+    └── Fase1/
+        ├── Entidades.md
+        ├── IngestaDatos.py
+        ├── SuscripcionOrion.md
+        ├── ETL/
+        │   ├── creacion_tabla.md
+        │   ├── ingesta.md
+        │   └── verificacion.md
+        ├── ProwerBi/
+        │   ├── Visualizacion1.md
+        │   └── Visualizacion2.md
+        └── grafana/
+            ├── configuracion.md
+            ├── variable.md
+            └── visualizaciones/
+                ├── CO₂.md
+                ├── Humedad.md
+                ├── pH.md
+                └── temperatura.md
+```
+
+Esta estructura organiza la documentación y scripts de la Fase 1 del proyecto Smart City, facilitando su navegación y mantenimiento.
+
+---
+
+## 6. 🎯 Objetivo Final
 
 - Desarrollar un entorno FIWARE funcional y documentado.
 - Simular sensores y visualizar sus datos.
