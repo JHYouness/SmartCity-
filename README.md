@@ -1,3 +1,4 @@
+
 # 🌆 Proyecto Smart City con FIWARE
 
 ## 1. ✨ Definición
@@ -10,10 +11,9 @@ Este proyecto simula una Smart City utilizando la plataforma FIWARE. Se definen 
 
 Se capturan datos de estos sensores y se almacenan mediante servicios de FIWARE (Orion, QuantumLeap, CrateDB), y se visualizan con Grafana y Power BI.
 
-El proyecto se divide en 2 fases:
+El proyecto se centra únicamente en la:
 
 - ⚙️ **Fase 1**: Configuración de la infraestructura sin IoT-Agent, con servicios de persistencia (QuantumLeap y CrateDB)
-- 🔌 **Fase 2**: Integración de un IoT-Agent para captura de datos reales en aula
 
 ## 2. 🔗 Enlaces a documentación
 
@@ -56,13 +56,9 @@ El proyecto se divide en 2 fases:
    - [`Docs/Fase1/ProwerBi/Visualizacion1.md`](Docs/Fase1/ProwerBi/Visualizacion1.md)
    - [`Docs/Fase1/ProwerBi/Visualizacion2.md`](Docs/Fase1/ProwerBi/Visualizacion2.md)
 
-## 4. 🛠️ Fase 2 (pendiente de implementación)
-
-- Añadir IoT-Agent para captura de datos reales desde sensores físicos en el aula.
-
 ---
 
-## 5. 🎯 Objetivo Final
+## 4. 🎯 Objetivo Final
 
 - Desarrollar un entorno FIWARE funcional y documentado.
 - Simular sensores y visualizar sus datos.
