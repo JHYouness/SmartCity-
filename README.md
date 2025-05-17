@@ -52,6 +52,7 @@ El proyecto se centra únicamente en la:
    - Verificación: [`Docs/Fase1/ETL/verificacion.md`](Docs/Fase1/ETL/verificacion.md)
 
 8. **Visualizaciones en Power BI** 🔍
+   - [`Docs/Fase1/ProwerBi/Script.py`](Docs/Fase1/ProwerBi/Script.py)
    - [`Docs/Fase1/ProwerBi/Visualizacion1.md`](Docs/Fase1/ProwerBi/Visualizacion1.md)
    - [`Docs/Fase1/ProwerBi/Visualizacion2.md`](Docs/Fase1/ProwerBi/Visualizacion2.md)
 
